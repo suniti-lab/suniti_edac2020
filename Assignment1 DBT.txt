@@ -1,0 +1,83 @@
+Assignment 1:
+========================================================================Ques 1: Create the following tables use
+Member – It contains information about the members
+
+create table: 
+ create table member_table(Member_Id int(5), Member_Name Varchar(30), Member_address Varchar(50), Acc_Open_Date date, membership_type Varchar(20));
+
+Table description:
+desc member_table;
+
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Member_Id       | int         | YES  |     | NULL    |       |
+| Member_Name     | varchar(30) | YES  |     | NULL    |       |
+| Member_address  | varchar(50) | YES  |     | NULL    |       |
+| Acc_Open_Date   | date        | YES  |     | NULL    |       |
+| membership_type | varchar(20) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+
+
+insert values:
+insert into member_table value(1, "suniti", "jaipur", '2020-12-02', 'lifetime');
+Query OK, 1 row affected (0.52 sec)
+
+mysql> select * from member_table;
++-----------+-------------+----------------+---------------+-----------------+
+| Member_Id | Member_Name | Member_address | Acc_Open_Date | membership_type |
++-----------+-------------+----------------+---------------+-----------------+
+|         1 | suniti      | jaipur         | 2020-12-02    | lifetime        |
++-----------+-------------+----------------+---------------+-----------------+
+
+
+QUES 2: Books- It contains information about the books belongs to the library.
+create table:
+ create table books(book_no int(6), book_Name Varchar(30), author_name Varchar(30), cost int(7), category Varchar(10));
+
+show table:
+
+desc books;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| book_no     | int         | YES  |     | NULL    |       |
+| book_Name   | varchar(30) | YES  |     | NULL    |       |
+| author_name | varchar(30) | YES  |     | NULL    |       |
+| cost        | int         | YES  |     | NULL    |       |
+| category    | varchar(10) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+insert values:
+
+ insert into books value(1, 'Let us C', 'Balaguruswamy', 500, 'computer');
+
+mysql> select * from books;
++---------+-----------+---------------+------+----------+
+| book_no | book_Name | author_name   | cost | category |
++---------+-----------+---------------+------+----------+
+|       1 | Let us C  | Balaguruswamy |  500 | computer |
++---------+-----------+---------------+------+----------+
+
+
+QUES 3:Issue – It contains the information about issue of the books.
+
+create table issue(Lib_Issue_Id int(10), description varchar(30));
+
+mysql> desc issue;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Lib_Issue_Id | int         | YES  |     | NULL    |       |
+| description  | varchar(30) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+insert query:
+ insert into issue value(11, 'computer science');
+
+mysql> select * from issue;
++--------------+------------------+
+| Lib_Issue_Id | description      |
++--------------+------------------+
+|           11 | computer science |
++--------------+------------------+
